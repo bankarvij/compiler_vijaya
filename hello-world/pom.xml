@@ -3,4 +3,38 @@
   <groupId>com.edu.vijaya</groupId>
   <artifactId>hello-world</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>org.antlr</groupId>
+	    <artifactId>antlr4</artifactId>
+	    <version>4.7.1</version>
+	</dependency>
+  </dependencies>
+  
+	<properties>
+	     <maven.compiler.source>1.8</maven.compiler.source>
+	     <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>  
+  
+  <build>
+  	<plugins>
+  		<plugin>
+		    <groupId>org.antlr</groupId>
+		    <artifactId>antlr4-maven-plugin</artifactId>
+		    <version>4.7.1</version>
+		    <executions>
+		        <execution>
+		            <goals>
+		                <goal>antlr4</goal>
+		            </goals>
+		            <configuration>
+		                <visitor>true</visitor>
+		            </configuration>		            
+		        </execution>
+		    </executions>
+		</plugin>
+  	</plugins>
+  </build>
+
 </project>
